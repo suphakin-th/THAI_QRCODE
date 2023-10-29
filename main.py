@@ -22,7 +22,7 @@ def generate_qr_code(account:str, currency:str, money:str):
     # Generate QRCode
     qr_code(
         account=account,
-        one_time=True, 
+        one_time=False, 
         path_qr_code=os.path.join(qr_code_dir, f"qrcode_{account}_{currency}_{datetime.now().strftime('%Y%m%d%H%M%S')}.PNG"), 
         country="TH", 
         money=money, 
@@ -31,7 +31,7 @@ def generate_qr_code(account:str, currency:str, money:str):
 
 if __name__ == "__main__":
     generate_qr_code(
-        account='1314098002729',
+        account='1409800272962',
         currency='THB',
-        money='100'
+        money='20'
     )
